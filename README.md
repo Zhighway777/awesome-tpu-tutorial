@@ -21,6 +21,13 @@
 
 A comprehensive tutorial repository covering **TPU (Tensor Processing Unit)** programming and architecture. This repository provides educational materials, hands-on tutorials, code examples, and resources for developers, researchers, and students interested in learning TPU programming.
 
+### 🔗 Resources
+
+- [Google Cloud TPU Documentation](https://cloud.google.com/tpu/docs)
+- [TensorFlow TPU Guide](https://www.tensorflow.org/guide/tpu)
+- [PyTorch XLA Documentation](https://pytorch.org/xla/)
+- [JAX on TPU](https://jax.readthedocs.io/)
+
 ### 🎯 What You'll Learn
 
 - **TPU Architecture**: Understanding TPU hardware design, components, and performance characteristics
@@ -31,12 +38,12 @@ A comprehensive tutorial repository covering **TPU (Tensor Processing Unit)** pr
 
 ### 📖 Table of Contents
 
+- [Resources](#resources)
 - [Getting Started](#getting-started)
 - [Repository Structure](#repository-structure)
 - [Tutorials](#tutorials)
 - [Documentation](#documentation)
 - [Examples](#examples)
-- [Resources](#resources)
 - [Contributing](#contributing)
 - [License](#license)
 - [Community](#community)
@@ -123,13 +130,6 @@ Browse our collection of practical examples:
 - Reinforcement learning
 - Custom training loops
 
-### 🔗 Resources
-
-- [Google Cloud TPU Documentation](https://cloud.google.com/tpu/docs)
-- [TensorFlow TPU Guide](https://www.tensorflow.org/guide/tpu)
-- [PyTorch XLA Documentation](https://pytorch.org/xla/)
-- [JAX on TPU](https://jax.readthedocs.io/)
-
 ### 🤝 Contributing
 
 We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on:
@@ -159,6 +159,13 @@ Special thanks to all contributors and the TPU community for their valuable inpu
 
 这是一个TPU（张量处理单元）的编程和架构教程仓库。本仓库为开发者、研究人员和学生提供教学材料、实践教程、代码示例和学习资源。
 
+### 🔗 资源
+
+- [Google Cloud TPU文档](https://cloud.google.com/tpu/docs)
+- [TensorFlow TPU指南](https://www.tensorflow.org/guide/tpu)
+- [PyTorch XLA文档](https://pytorch.org/xla/)
+- [JAX on TPU](https://jax.readthedocs.io/)
+
 ### 🎯 学习内容
 
 - **TPU架构**：理解TPU硬件设计、组件和性能特征
@@ -169,12 +176,12 @@ Special thanks to all contributors and the TPU community for their valuable inpu
 
 ### 📖 目录
 
+- [资源](#资源)
 - [快速开始](#快速开始)
 - [仓库结构](#仓库结构)
 - [教程](#教程)
 - [文档](#文档)
 - [示例](#示例)
-- [资源](#资源)
 - [贡献](#贡献)
 - [许可证](#许可证)
 - [社区](#社区)
@@ -260,13 +267,6 @@ TPU-Programming-Tutorials/
 - 推荐系统
 - 强化学习
 - 自定义训练循环
-
-### 🔗 资源
-
-- [Google Cloud TPU文档](https://cloud.google.com/tpu/docs)
-- [TensorFlow TPU指南](https://www.tensorflow.org/guide/tpu)
-- [PyTorch XLA文档](https://pytorch.org/xla/)
-- [JAX on TPU](https://jax.readthedocs.io/)
 
 ### 🤝 贡献
 
