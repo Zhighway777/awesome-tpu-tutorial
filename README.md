@@ -142,11 +142,6 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 This project is licensed under the Apache 2.0 License.- see the [LICENSE](LICENSE) file for details.
 
-### 👥 Community
-
-- **Issues**: Report bugs or request features via [GitHub Issues](https://github.com/Zhighway777/TPU-Programming-Tutorials/issues)
-- **Discussions**: Join our [GitHub Discussions](https://github.com/Zhighway777/TPU-Programming-Tutorials/discussions)
-- **Pull Requests**: Submit improvements via [Pull Requests](https://github.com/Zhighway777/TPU-Programming-Tutorials/pulls)
 
 ### 🌟 Acknowledgments
 
@@ -285,15 +280,6 @@ TPU-Programming-Tutorials/
 
 本项目采用 **Apache License 2.0** 开源许可证。 - 详见[LICENSE](LICENSE)文件。
 
-### 👥 社区
-
-- **问题反馈**：通过[GitHub Issues](https://github.com/Zhighway777/TPU-Programming-Tutorials/issues)报告错误或请求功能
-- **讨论**：加入我们的[GitHub Discussions](https://github.com/Zhighway777/TPU-Programming-Tutorials/discussions)
-- **Pull Requests**：通过[Pull Requests](https://github.com/Zhighway777/TPU-Programming-Tutorials/pulls)提交改进
-
-### 🌟 致谢
-
-特别感谢所有贡献者和TPU社区的宝贵意见和支持。
 
 ---
 
