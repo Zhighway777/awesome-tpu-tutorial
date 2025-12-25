@@ -157,7 +157,7 @@ Special thanks to all contributors and the TPU community for their valuable inpu
 > 本仓库不仅介绍 TPU API 使用，更关注 **TPU 硬件架构、XLA/HLO 编译流程、
 > kernel 设计与性能建模之间的关系**。
 
-这是一个综合性的**TPU（张量处理单元）**编程和架构教程仓库。本仓库为开发者、研究人员和学生提供教学材料、实践教程、代码示例和学习资源。
+这是一个TPU（张量处理单元）的编程和架构教程仓库。本仓库为开发者、研究人员和学生提供教学材料、实践教程、代码示例和学习资源。
 
 ### 🎯 学习内容
 
