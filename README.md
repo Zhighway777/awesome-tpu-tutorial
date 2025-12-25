@@ -14,6 +14,11 @@
 
 ### 📚 About This Repository
 
+> 🎓 **Focus**: Architecture-aware TPU programming  
+> This repository emphasizes **how TPU hardware architecture, XLA/HLO compilation,
+> and kernel-level design interact**, rather than only API usage.
+
+
 A comprehensive tutorial repository covering **TPU (Tensor Processing Unit)** programming and architecture. This repository provides educational materials, hands-on tutorials, code examples, and resources for developers, researchers, and students interested in learning TPU programming.
 
 ### 🎯 What You'll Learn
@@ -48,10 +53,10 @@ A comprehensive tutorial repository covering **TPU (Tensor Processing Unit)** pr
 
 ```bash
 # Clone the repository
-git clone https://github.com/Zhighway777/TPU-Programming-Tutorials.git
+git clone https://github.com/Zhighway777/awesome-tpu-tutorial.git
 
 # Navigate to the repository
-cd TPU-Programming-Tutorials
+cd awesome-tpu-tutorial
 
 # Explore tutorials
 cd tutorials/
@@ -60,7 +65,7 @@ cd tutorials/
 ### 📁 Repository Structure
 
 ```
-TPU-Programming-Tutorials/
+awesome-tpu-tutorial/
 ├── README.md                    # This file
 ├── CONTRIBUTING.md              # Contribution guidelines
 ├── LICENSE                      # License information
@@ -135,7 +140,7 @@ We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) f
 
 ### 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the Apache 2.0 License.- see the [LICENSE](LICENSE) file for details.
 
 ### 👥 Community
 
@@ -152,6 +157,10 @@ Special thanks to all contributors and the TPU community for their valuable inpu
 ## <a name="chinese"></a>中文
 
 ### 📚 关于本仓库
+
+> 🎓 **仓库定位**：面向架构与编译器视角的 TPU 编程  
+> 本仓库不仅介绍 TPU API 使用，更关注 **TPU 硬件架构、XLA/HLO 编译流程、
+> kernel 设计与性能建模之间的关系**。
 
 这是一个综合性的**TPU（张量处理单元）**编程和架构教程仓库。本仓库为开发者、研究人员和学生提供教学材料、实践教程、代码示例和学习资源。
 
@@ -274,7 +283,7 @@ TPU-Programming-Tutorials/
 
 ### 📄 许可证
 
-本项目采用MIT许可证 - 详见[LICENSE](LICENSE)文件。
+本项目采用 **Apache License 2.0** 开源许可证。 - 详见[LICENSE](LICENSE)文件。
 
 ### 👥 社区
 

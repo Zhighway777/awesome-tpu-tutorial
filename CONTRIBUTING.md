@@ -142,6 +142,11 @@ If you have questions, feel free to:
 
 All contributors will be recognized in our repository. Thank you for helping make TPU programming more accessible!
 
+### 📌 Source of Truth
+
+- English documentation is considered the authoritative version
+- Translations may be adapted for clarity and pedagogy
+- Technical correctness should follow official TPU / XLA behavior
 ---
 
 ## <a name="chinese"></a>中文
@@ -281,6 +286,12 @@ git push origin feature/your-feature-name
 ### 🙏 致谢
 
 所有贡献者都将在我们的仓库中得到认可。感谢您帮助让TPU编程更易于理解！
+
+### 📌 权威版本说明
+
+- 英文文档为技术权威版本
+- 中文文档可为教学目的适当调整表达
+- 技术行为以官方 TPU / XLA 语义为准
 
 ---
 
