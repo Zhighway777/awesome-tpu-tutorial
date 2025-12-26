@@ -1,4 +1,4 @@
-# TPU Programming Tutorials
+# awesome tpu tutorial
 
 ![GitHub stars](https://img.shields.io/github/stars/Zhighway777/TPU-Programming-Tutorials?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/Zhighway777/TPU-Programming-Tutorials?style=social)
