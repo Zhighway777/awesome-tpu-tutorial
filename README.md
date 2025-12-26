@@ -178,6 +178,9 @@ Special thanks to all contributors and the TPU community for their valuable inpu
 这是一个TPU（张量处理单元）的编程和架构教程仓库。本仓库为开发者、研究人员和学生提供教学材料、实践教程、代码示例和学习资源。
 
 ### 🔗 资源
+#### 我的文章
+- [google最新的tpu架构信息](docs/architecture/Google's_latest_TPU_tracking.md)
+
 #### 技术博客
 > 中文互联网的朋友首先推荐ZOMI老师的AI Infra中关于Google TPU架构的演进系列
 - [谷歌 TPU 历史发展 | ZOMI](https://infrasys-ai.github.io/aisystem-docs/02Hardware05Abroad/04TPUIntrol.html)
