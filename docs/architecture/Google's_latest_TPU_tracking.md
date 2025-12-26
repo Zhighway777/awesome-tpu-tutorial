@@ -17,14 +17,17 @@ google tpu自2016年开始设计第一个版本TPU-v1，到2021年广为人知�
 
 TPUv1是针对NN的推理而设计的，很快便暴露出瓶颈：无法支持ML的训练任务如Alex-Net，CNN0，ImageNet，和Bert这类NLP任务的训练。\
 这需要更大的计算能力和存储容量以及带宽，同时由于训练任务的算法和模型需要不断调整，因此也需要可编程性更强。因此在TPUv2 [6](#ref-6)中，google采用了双核配置并使用HBM代替DDR3作为内存；在可编程性上，TPUv2使用更通用的可编程向量单元代替TPUv1硬编码功能单元，并采用了 VLIW 架构同时和XLA编译器紧密配合（XLA也是从TPUv2开始逐步发展的）。TPUv2还集成了定制的片间互连(InterChip Interconnect, ICI) [6](#ref-6)以支持大规模分布式训练并提出了pod(超级计算机)的概念沿用至今(TPUv7)。\
-总体来讲，TPUv1 的设计侧重于高效的推理，而 TPUv2 则通过引入强大的专用计算单元、大幅提升的内存带宽、重塑的内存层级、更灵活的架构以及为大规模并行设计的互连，成功地转型为一款强大的ML训练芯片。这些转变在2017年完成，同年Google提出了革命性的论文“Attention is All You Need”。不得不再次感叹google团队强大的工程能力和前瞻性的设计理念。
+总体来讲，TPUv1 的设计侧重于高效的推理，而 TPUv2 则通过引入强大的专用计算单元、大幅提升的内存带宽、重塑的内存层级、更灵活的架构以及为大规模并行设计的互连，成功地转型为一款强大的ML训练芯片。这些转变在2017年完成，同年Google提出了革命性的论文“Attention is All You Need [8]”。不得不再次感叹google团队强大的工程能力和前瞻性的设计理念。
 
 
 下图[7](#ref-7)是TPUv2的PCB和pod架构图：
 
-TPUv2 boards = 4 chips
+TPUv2 boards = 4 chips  
+
 ![TPUv2-PCB](../pics/TPUv2-PCB.png)
-TPUv2 pod = 256chips\
+
+TPUv2 pod = 256chips  
+
 ![TPUv2-pod](../pics/TPUv2-pod.png)
 
 ### TPUv3
@@ -40,16 +43,33 @@ TPUv3是在TPUv2的基础上进行增量式的改进，利用“边际效应”�
 通过在现有成熟设计上叠加这些优化，TPUv3 在相对较短的时间内实现了性能的大幅跃升，并且能够支持更大规模的 ML 工作负载。
 
 下图[7](#ref-7)是TPUv2的PCB和pod架构图：\
-TPUv3 boards = 4 chips
+TPUv3 boards = 4 chips  
+
 ![TPUv3-PCB](../pics/TPUv3-PCB.png)
-TPUv3 pod = 1024chips
+
+TPUv3 pod = 1024chips   
+
 ![TPUv3-pod](../pics/TPUv3-pod.png)
 
 
 ### TPUv4
+据TPUv3时隔四年后，终于发布了TPUv4的版本。尽管这段时间里Google在AI领域发表了许多重要的成果，但似乎一直没有对TPU进行更新，这也导致了在2023年和2024年间，Google的TPU芯片在与NVIDIA和AMD等竞争对手的竞争中处于劣势， 。
+
+### TPUv5
+> **Note:** 互联网上大部分关于TPU的架构总结止步于TPUv4，TPUv5及之后的版本信息较少，以下内容基于有限的信息进行整理，如有错误欢迎指正。
 
 
-### TPUv5及以后
+**TPUv5e**
+
+
+**TPUv5p**
+
+
+### TPUv6
+
+
+
+### TPUv7
 
 > **Concepts Explained:**
 > - TCO (Total Cost of Ownership)\
@@ -62,4 +82,5 @@ TPUv3 pod = 1024chips
 <a id="ref-4"></a>[4] [Total Cost of Ownership - Wikipedia](https://en.wikipedia.org/wiki/Total_cost_of_ownership)\
 <a id="ref-5"></a>[5] [Google supercharges machine learning tasks with custom chip](https://cloud.google.com/blog/products/ai-machine-learning/google-supercharges-machine-learning-tasks-with-custom-chip)\
 <a id="ref-6"></a>[6] [The Design Process for Google’s Training Chips: TPUv2 and TPUv3](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9351692)\
-<a id="ref-7"></a>[7] [Google’s Training Chips Revealed: TPUv2 and TPUv3](https://www.hc32.hotchips.org/assets/program/conference/day2/HotChips2020_ML_Training_Google_Norrie_Patil.v01.pdf)
+<a id="ref-7"></a>[7] [Google’s Training Chips Revealed: TPUv2 and TPUv3](https://www.hc32.hotchips.org/assets/program/conference/day2/HotChips2020_ML_Training_Google_Norrie_Patil.v01.pdf)\
+<a id="ref-8"></a>[8] [Attention is All You Need](https://arxiv.org/abs/1706.03762)
