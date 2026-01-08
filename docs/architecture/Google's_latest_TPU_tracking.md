@@ -53,7 +53,12 @@ TPUv3 pod = 1024chips
 
 
 ### TPUv4
-据TPUv3时隔四年后，终于发布了TPUv4的版本。尽管这段时间里Google在AI领域发表了许多重要的成果，但似乎一直没有对TPU进行更新，这也导致了在2023年和2024年间，Google的TPU芯片在与NVIDIA和AMD等竞争对手的竞争中处于劣势，进一步导致当时其AI模型的竞争力与OpenAI，Meta等顶级AI公司拉开了差距，尽管如此，Google的AI模型Gemini仍然在之后的两年内(2024-2025)追赶上并达到世界顶级;这与其全栈自研的能力和恐怖的工程能力密不可分。
+据TPUv3时隔四年后，终于发布了TPUv4的版本。尽管这段时间里Google在AI领域发表了许多重要的成果，但似乎一直没有对TPU进行更新，这导致了在2023年和2024年间，Google与NVIDIA和AMD等竞争对手的芯片性能中处于劣势，进一步导致当时其AI模型的竞争力与OpenAI，Meta等顶级AI公司拉开了差距，尽管如此，Google的AI模型Gemini仍然在之后的两年内(2024-2025)追赶上并达到世界顶级，这与其全栈自研的能力和恐怖的工程能力密不可分。
+
+在2018年到2022年期间，AI领域发生了很大的变化，transformer架构的兴起和LLM以及diffusion模型逐渐流行。Pytorch训练框架也代替了Tensorflow成为主流框架google内部也逐步抛弃TensorFlow转向JAX。之后我将会出一篇文章专门介绍这些架构的发展史[训练框架沉浮史](docs/architecture/Training-Framework-History.md)。除了模型架构和框架的变化，模型的参数量也发生了极大的提升，提升了大概三到四个数量级。![模型训练所需的FLOPs增长趋势](模型训练所需的FLOPs增长趋势.png)。因此，TPUv4的设计正式为了应对上面的这些变化。\
+从TPUv4开始我会详细分析其芯片架构的设计并且和TPUv3进行对比，因为v4的设计在历代芯片中起着承上启下的作用。因此很有必要对其架构进行详尽的分析。这里我只对整体架构进行分析以保持文章的连贯性，希望深入了解TPU架构的朋友请参考专门介绍TPUv4的硬件架构细节和编程模型的文章[Google TPUv4架构详解](docs/architecture/Google-TPUv4-Architecture-Deep-Dive.md)。
+
+下图是TPUv4的PCB和pod架构图：\
 
 ### TPUv5
 > **Note:** 互联网上大部分关于TPU的架构总结止步于TPUv4，TPUv5及之后的版本信息较少，以下内容基于有限的信息进行整理，如有错误欢迎指正。
