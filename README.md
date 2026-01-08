@@ -42,6 +42,7 @@ A comprehensive tutorial repository covering **TPU (Tensor Processing Unit)** pr
 - [PyTorch XLA Documentation](https://pytorch.org/xla/)
 - [JAX on TPU](https://jax.readthedocs.io/)
 - [Pallas: a JAX kernel language](https://docs.jax.dev/en/latest/pallas/index.html)
+- [How to Scale Your Model | Google DeepMind](https://jax-ml.github.io/scaling-book/)
 
 #### GitHub
 - [TPU Starter](https://github.com/ayaka14732/tpu-starter/tree/main)
@@ -183,7 +184,7 @@ Special thanks to all contributors and the TPU community for their valuable inpu
 
 #### 技术博客
 > 中文互联网的朋友首先推荐ZOMI老师的AI Infra中关于Google TPU架构的演进系列
-- [谷歌 TPU 历史发展 | ZOMI](https://infrasys-ai.github.io/aisystem-docs/02Hardware05Abroad/04TPUIntrol.html)
+- [谷歌 TPU 发展历史以及架构演变 | ZOMI](https://infrasys-ai.github.io/aisystem-docs/02Hardware05Abroad/04TPUIntrol.html)
 - [TPU 使用教程](https://shizhediao.github.io/TPU-Tutorial/)
 - [TPU深度探索（TPU Deep Dive）](https://henryhmko.github.io/posts/tpu/tpu.html)
 - [SemiAnalysis深度解读TPU--谷歌冲击“英伟达帝国”](https://wallstreetcn.com/articles/3760377)
@@ -203,6 +204,7 @@ Special thanks to all contributors and the TPU community for their valuable inpu
 - [JAX on TPU](https://jax.readthedocs.io/)
 - [Pallas: a JAX kernel language](https://docs.jax.dev/en/latest/pallas/index.html)
 - [ensor Processing Units (TPU): A Technical Analysis and Their Impact on Artificial Intelligence](https://tech4future.info/wp-content/uploads/2024/11/Tensor-Processing-Units-TPU-Paper-ENG.pdf)
+- [How to Scale Your Model | Google DeepMind](https://jax-ml.github.io/scaling-book/)
 
 #### GitHub
 - [TPU Starter](https://github.com/ayaka14732/tpu-starter/tree/main)
