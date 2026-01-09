@@ -57,23 +57,21 @@ TPUv2引入了定制的片间互连(InterChip Interconnect, ICI)模块，使得�
 TPUv2到TPUv3的改动主要通过“边际效应”来提升。
 
 计算能力翻倍：MXU 数量加倍，使最大 FLOPs/秒翻倍。
-![alt text](image.png)
+![alt text](../pics/arch_deepdive/TPUv3-arch-1.png)
 时钟频率提升：从 700 MHz 提高到 940 MHz，性能提升30% 
-![alt text](image-1.png)
+![alt text](../pics/arch_deepdive/TPUv3-arch-2.png)
 HBM 性能与容量提升：HBM 带宽提升30%，容量翻倍，支持更大的模型和批次大小 
-![alt text](image-3.png)
+![alt text](../pics/arch_deepdive/TPUv3-arch-3.png)
 互联带宽提升：链接带宽提升30%至 650 Gbps/链接
 
-
-![alt text](image-4.png)
+![alt text](../pics/arch_deepdive/TPUv3-arch-4.png)
 系统规模扩展：最大系统规模从 TPUv2 的 256 芯片扩展到 1024 芯片
-![alt text](image-5.png)
+![alt text](../pics/arch_deepdive/TPUv3-arch-5.png)
 下图是使用Roofline模型对比TPUv2和TPUv3的性能提升以及与当时Nvidia最先及的显卡V100进行对比。
 - TPUv3有着更小的面积和较落后的nm工艺在 MLPerf 0.6 基准测试中，TPUv3 的单芯片性能几何平均值与 NVIDIA V100 相当。
 - TPUv3 相较于 TPUv2 的峰值计算性能提升了 2.7 倍，尽管内存带宽、ICI 带宽和时钟频率的提升仅为 1.3 倍，这表明额外的 MXU 利用率高且面积贡献小
 - TPUv3 超级计算机在运行 Google 应用时，GigaFLOPs/Watt 效率比运行 Linpack 基准测试的通用超级计算机高出50倍
-
-![alt text](image-6.png)
+![alt text](../pics/arch_deepdive/Roofline_Models.png)
 
 ## Reference
 <a id="ref-1"></a>[1] [Google’s Training Chips Revealed:TPUv2 and TPUv3](https://www.hc32.hotchips.org/assets/program/conference/day2/HotChips2020_ML_Training_Google_Norrie_Patil.v01.pdf)\

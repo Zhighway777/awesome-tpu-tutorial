@@ -2,15 +2,15 @@
 > 补充从2021年至今的google tpu系列的各个型号和特点
 
 ## 历史架构
-google tpu自2016年开始设计第一个版本TPU-v1，到2021年广为人知的TPU-v4系列的架构演进可以参考ZOMI老师的文章[1](#ref-1)，Patterson教授还专为此写了一篇从2016至2021年间TPU的演进介绍[2](#ref-2).
+google tpu自2016年开始设计第一个版本TPU-v1，到2021年广为人知的TPU-v4系列的架构演进可以参考ZOMI老师的文章[1](#ref-1)，Patterson教授还专为此写了一篇从2016至2021年间TPU的演进介绍[2](#ref-2)。如有读者对TPU架构的提出以及之后的发展感兴趣，欢迎参考我的另一篇文章[从CPU,GPU和TPU](From-CPU-GPU-to-TPU.md)。
 
 ### TPUv1
 在TPUv1的论文中提到“在数据中心环境中，以显著改善TCO[4](#ref-4)，来降低神经网络的推理成本。” 因此TPU在设计之初就考虑到芯片的大规模部署和高效能计算，同时为了简化硬件设计和快速部署，TPU选择为利用PCIe/IO的总线架构，像GPU一样作为加速卡插入服务器中[3](#ref-3).更简单地说，类似于一个“外挂单片机”。
 
 下图是TPUv1的PCB设计图和实际部署在服务器机架中的照片[5](#ref-5)：
 <div style="text-align: center;">
-<img src="../pics/TPUv1-PCB.png" alt="TPUv1-PCB" width="200">
-<img src="../pics/TPUv1-rack.png" alt="Server racks with TPUs" width="200">
+<img src="../pics/arch_tracking/TPUv1-PCB.png" alt="TPUv1-PCB" width="200">
+<img src="../pics/arch_tracking/TPUv1-rack.png" alt="Server racks with TPUs" width="200">
 </div>  
 
 ### TPUv2
@@ -24,12 +24,11 @@ TPUv1是针对NN的推理而设计的，很快便暴露出瓶颈：无法支持M
 
 TPUv2 boards = 4 chips  
 
-![TPUv2-PCB](../pics/TPUv2-PCB.png)
+![TPUv2-PCB](../pics/arch_tracking/TPUv2-PCB.png)
 
 TPUv2 pod = 256chips  
 
-![TPUv2-pod](../pics/TPUv2-pod.png)
-
+![TPUv2-pod](../pics/arch_tracking/TPUv2-pod.png)
 ### TPUv3
 TPUv3是在TPUv2的基础上进行增量式的改进，利用“边际效应”显著的提升了性能。尽管没有进行架构上的大幅变动，但是这种增量式的改进仍然需要经过精细化的分析和调整得到。
 其调整主要在以下方面：
@@ -45,27 +44,26 @@ TPUv3是在TPUv2的基础上进行增量式的改进，利用“边际效应”�
 下图[7](#ref-7)是TPUv2的PCB和pod架构图：\
 TPUv3 boards = 4 chips  
 
-![TPUv3-PCB](../pics/TPUv3-PCB.png)
+![TPUv3-PCB](../pics/arch_tracking/TPUv3-PCB.png)
 
 TPUv3 pod = 1024chips   
 
-![TPUv3-pod](../pics/TPUv3-pod.png)
-
+![TPUv3-pod](../pics/arch_tracking/TPUv3-pod.png)
 
 ### TPUv4i
 
 ### TPUv4
 据TPUv3时隔四年后，于2022年终于发布了TPUv4的版本。尽管这段时间里Google在AI领域发表了许多重要的成果，但似乎一直没有对TPU进行更新，这导致了在2023年和2024年间，Google与NVIDIA和AMD等竞争对手的芯片性能中处于劣势，进一步导致当时其AI模型的竞争力与OpenAI，Meta等顶级AI公司拉开了差距，尽管如此，Google的AI模型Gemini仍然在之后的两年内(2024-2025)追赶上并达到世界顶级，这与其全栈自研的能力和恐怖的工程能力密不可分。
 
-在2018年到2022年期间，AI领域发生了很大的变化，transformer架构的兴起和LLM以及diffusion模型逐渐流行。Pytorch训练框架也代替了Tensorflow成为主流框架google内部也逐步抛弃TensorFlow转向JAX。之后我将会出一篇文章专门介绍这些架构的发展史[训练框架沉浮史](docs/architecture/Training-Framework-History.md)。除了模型架构和框架的变化，模型的参数量也发生了极大的提升，提升了大概三到四个数量级。![模型训练所需的FLOPs增长趋势](../pics/模型训练所需的FLOPs增长趋势.png)。因此，TPUv4的设计正式为了应对上面的这些变化。\
-从TPUv4开始我会详细分析其芯片架构的设计并且和TPUv3进行对比，因为v4的设计在历代芯片中起着承上启下的作用。因此很有必要对其架构进行详尽的分析。这里我只对整体架构进行分析以保持文章的连贯性，希望深入了解TPU架构的朋友请参考专门介绍TPUv4的硬件架构细节和编程模型的文章[Google TPUv4架构详解](docs/architecture/Google-TPUv4-Architecture-Deep-Dive.md)。
+在2018年到2022年期间，AI领域发生了很大的变化，transformer架构的兴起和LLM以及diffusion模型逐渐流行。Pytorch训练框架也代替了Tensorflow成为主流框架google内部也逐步抛弃TensorFlow转向JAX。之后我将会出一篇文章专门介绍这些架构的发展史[训练框架沉浮史](../framework/Training-Framework-History.md)。除了模型架构和框架的变化，模型的参数量也发生了极大的提升，提升了大概三到四个数量级。![模型训练所需的FLOPs增长趋势](../pics/arch_tracking/模型训练所需的FLOPs增长趋势.png)因此，TPUv4的设计正式为了应对上面的这些变化。\
+从TPUv4开始我会详细分析其芯片架构的设计并且和TPUv3([深入了解TPUv1~v3的架构转变](TPUv1~v3_revealed.md))进行对比，因为v4的设计在历代芯片中起着承上启下的作用。因此很有必要对其架构进行详尽的分析。这里我只对整体架构进行分析以保持文章的连贯性，希望深入了解TPU架构的朋友请参考专门介绍TPUv4的硬件架构细节和编程模型的文章[Google TPUv4架构详解](Google-TPUv4-Architecture-Deep-Dive.md)。
 
 下图[9](#ref-9)是TPUv4的PCB和pod架构图：\
 TPUv4 boards = 4 chips \
-![TPUv4-PCB](../pics/TPUv4-PCB.png)
+![TPUv4-PCB](../pics/arch_tracking/TPUv4-PCB.png)
 
 TPUv4 pod = 4096chips \
-![TPUv4-pod](../pics/TPUv4-pod.png)
+![TPUv4-pod](../pics/arch_tracking/TPUv4-pod.png)
 
 TPUv4
 ### TPUv5
@@ -96,5 +94,5 @@ TPUv4
 <a id="ref-5"></a>[5] [Google supercharges machine learning tasks with custom chip](https://cloud.google.com/blog/products/ai-machine-learning/google-supercharges-machine-learning-tasks-with-custom-chip)\
 <a id="ref-6"></a>[6] [The Design Process for Google’s Training Chips: TPUv2 and TPUv3](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9351692)\
 <a id="ref-7"></a>[7] [Google’s Training Chips Revealed: TPUv2 and TPUv3](https://www.hc32.hotchips.org/assets/program/conference/day2/HotChips2020_ML_Training_Google_Norrie_Patil.v01.pdf)\
-<a id="ref-8"></a>[8] [Attention is All You Need](https://arxiv.org/abs/1706.03762)
+<a id="ref-8"></a>[8] [Attention is All You Need](https://arxiv.org/abs/1706.03762) \
 <a id="ref-8"></a>[9] [TPU v4: An Optically Reconfigurable Supercomputer for Machine Learning with Hardware Support for Embeddings](https://arxiv.org/pdf/2304.01433)
