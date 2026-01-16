@@ -66,6 +66,8 @@ TPUv4 pod = 4096chips \
 ![TPUv4-pod](../pics/arch_tracking/TPUv4-pod.png)
 
 TPUv4
+
+
 ### TPUv5
 > **Note:** 互联网上大部分关于TPU的架构总结止步于TPUv4，TPUv5及之后的版本信息较少，以下内容基于有限的信息进行整理，如有错误欢迎指正。
 
