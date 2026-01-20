@@ -13,7 +13,7 @@ TPU的架构转变是根据需求侧的转变发展而来。从2014年至2017年
 为了满足以上要求，Google在最原始的TPUv1架构上进行了多方面的改进，最终形成了TPUv2和TPUv3架构。
 
 **TPUv1** 
-
+![TPUv1-PCB](../pics/arch_tracking/TPUv1-PCB.png)
 TPUv1的组件如下所示：
 
 ![TPUv1-1](../pics/arch_deepdive/TPUv1-1.png)
