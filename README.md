@@ -23,7 +23,10 @@ A comprehensive tutorial repository covering **TPU (Tensor Processing Unit)** pr
 
 ### 🔗 Resources
 
-> References cited in the architecture articles under `docs/architecture/`. English section includes **English-language sources only**.
+#### Articles
+- [Latest Google TPU Architecture Tracking](docs/architecture/Google's_latest_TPU_tracking.en.md)
+- [From TPUv3 to TPUv4i](docs/architecture/Google-TPUv4-Architecture-Deep-Dive.en.md)
+- [Background TPUv1~v3 Revealed](docs/architecture/TPUv1~v3_revealed.en.md)
 
 #### Blogs
 - [An in-depth look at Google’s first Tensor Processing Unit (TPU)](https://cloud.google.com/blog/products/ai-machine-learning/an-in-depth-look-at-googles-first-tensor-processing-unit-tpu)
@@ -193,8 +196,9 @@ Special thanks to all contributors and the TPU community for their valuable inpu
 ### 🔗 资源
 #### 我的文章
 - [google最新的tpu架构信息](docs/architecture/Google's_latest_TPU_tracking.md)
+- [从TPUv3到TPUv4i](docs/architecture/Google-TPUv4-Architecture-Deep-Dive.md)
+- [TPUv1~v3架构回顾](docs/architecture/TPUv1~v3_revealed.md)
 
-> 依据 `docs/architecture/` 中文章的引用资料汇总（中文区不做语言限制）。
 
 #### 技术博客
 > 中文互联网的朋友首先推荐ZOMI老师的AI Infra中关于Google TPU架构的演进系列
