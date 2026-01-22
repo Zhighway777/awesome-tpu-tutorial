@@ -50,13 +50,36 @@ TPUv3 pod = 1024chips
 
 ![TPUv3-pod](../pics/arch_tracking/TPUv3-pod.png)
 
-### TPUv4i
-
 ### TPUv4
-据TPUv3时隔四年后，于2022年终于发布了TPUv4的版本。尽管这段时间里Google在AI领域发表了许多重要的成果，但似乎一直没有对TPU进行更新，这导致了在2023年和2024年间，Google与NVIDIA和AMD等竞争对手的芯片性能中处于劣势，进一步导致当时其AI模型的竞争力与OpenAI，Meta等顶级AI公司拉开了差距，尽管如此，Google的AI模型Gemini仍然在之后的两年内(2024-2025)追赶上并达到世界顶级，这与其全栈自研的能力和恐怖的工程能力密不可分。
+据TPUv3时隔三年后，于2021年终于发布了TPUv4的版本。尽管这段时间里Google在AI领域发表了许多重要的成果，但似乎一直没有对TPU进行更新，这导致了在2023年和2024年间，Google与NVIDIA和AMD等竞争对手的芯片性能中处于劣势，进一步导致当时其AI模型的竞争力与OpenAI，Meta等顶级AI公司拉开了差距，尽管如此，Google的AI模型Gemini仍然在之后的两年内(2024-2025)追赶上并达到世界顶级，这与其全栈自研的能力和恐怖的工程能力密不可分。
 
 在2018年到2022年期间，AI领域发生了很大的变化，transformer架构的兴起和LLM以及diffusion模型逐渐流行。Pytorch训练框架也代替了Tensorflow成为主流框架google内部也逐步抛弃TensorFlow转向JAX。之后我将会出一篇文章专门介绍这些架构的发展史[训练框架沉浮史](../framework/Training-Framework-History.md)。除了模型架构和框架的变化，模型的参数量也发生了极大的提升，提升了大概三到四个数量级。![模型训练所需的FLOPs增长趋势](../pics/arch_tracking/模型训练所需的FLOPs增长趋势.png)因此，TPUv4的设计正式为了应对上面的这些变化。\
 从TPUv4开始我会详细分析其芯片架构的设计并且和TPUv3([深入了解TPUv1~v3的架构转变](TPUv1~v3_revealed.md))进行对比，因为v4的设计在历代芯片中起着承上启下的作用。因此很有必要对其架构进行详尽的分析。这里我只对整体架构进行分析以保持文章的连贯性，希望深入了解TPU架构的朋友请参考专门介绍TPUv4的硬件架构细节和编程模型的文章[Google TPUv4架构详解](Google-TPUv4-Architecture-Deep-Dive.md)。
+
+GoogleTPUv4版本有两种芯片设计 TPUv4i是专用于推理场景设计的芯片，TPUv4是TPUv4i的双核版本，主要用于训练场景。
+
+TPUv4i相较于TPUv3经历了以下几个架构方面的变化：
+
+1. 核心设计：从 TPUv3 的双核（用于训练/推理通用）转变为 TPUv4i 的单核（专注于推理），以降低功耗和成本。
+2. 内存层级：TPUv4i 新增了 128MB 的片上 CMEM，提供了比 TPUv3 的 SRAM 更高的带宽和更低的能耗，用于加速关键数据访问。
+3. 计算单元：TPUv4i 每个核心的 MXU 数量翻倍（从 2 个增至 4 个），以应对不断增长的 DNN 模型计算需求。
+4. 算术支持：TPUv4i 保留了 Bfloat16，并支持 Int8，确保了向后 ML 兼容性，同时满足推理的量化需求。
+5. 功耗与散热：TPUv4i 的 TDP 大幅降低至 175W，使其能够采用气冷散热，而 TPUv3 的 TDP 为 450W 并采用液冷。
+6. 片上互连：TPUv4i 引入了共享的 OCI，提供更灵活的数据路由，尤其是在 CMEM 集成后。
+
+下图是TPUv4i的整体架构图：
+
+TPUv4i boards = 4 chips \
+![TPUv4i-arch](../pics/arch_tracking/TPUv4i-PCB.png)
+
+TPUv4由于是面向训练的场景，因此是TPUv4i的superset：
+1. 双核设计：TPUv4 采用双核配置，核心配置与TPUv4i相同，专为训练任务优化。
+2. 2倍HBM
+3. 从2D Torus升级到使用3D Torus
+4. 引入OCS(Optical circuit Switch)光学互连技术，大幅提升片间通信带宽，降低延迟。
+5. 使用第三代Sparse Core技术提升嵌入表性能
+6. 更高的TDP和水冷技术以保证SLO
+
 
 下图[9](#ref-9)是TPUv4的PCB和pod架构图：\
 TPUv4 boards = 4 chips \
@@ -64,8 +87,6 @@ TPUv4 boards = 4 chips \
 
 TPUv4 pod = 4096chips \
 ![TPUv4-pod](../pics/arch_tracking/TPUv4-pod.png)
-
-TPUv4
 
 
 ### TPUv5
