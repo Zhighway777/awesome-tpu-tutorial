@@ -23,37 +23,13 @@ A comprehensive tutorial repository covering **TPU (Tensor Processing Unit)** pr
 
 ### 🔗 Resources
 
-#### Blogs
-- [TPU Deep Dive](https://henryhmko.github.io/posts/tpu/tpu.html)
-- [Google TPU Architecture: Complete Guide to 7 Generations](https://www.introl.io/blog/google-tpu-architecture-complete-guide-7-generations)
-
-#### Slides
-- [TPU Datacenter Performance Analysis](https://andrewt0301.github.io/hse-acos-course/part1ca/16_TPU/NAETPUslides5Apr17v2.pdf)
-- [Ten Lessons: 4 TPU Generations](https://www.cs.ucla.edu/wp-content/uploads/cs/PATTERSON-10-Lessons-4-TPU-gens-CO2e-45-minutes.pdf)
-
-#### Papers
-- [Ten Lessons From Three Generations Shaped Google’s TPUv4i](https://gwern.net/doc/ai/scaling/hardware/2021-jouppi.pdf)
-- [In-Datacenter Performance Analysis of a Tensor Processing Unit](https://arxiv.org/pdf/1704.04760)
-- [Tensor Processing Units (TPU): A Technical Analysis and Their Impact on Artificial Intelligence](https://tech4future.info/wp-content/uploads/2024/11/Tensor-Processing-Units-TPU-Paper-ENG.pdf)
-
-#### Docs
-- [Google Cloud TPU Documentation](https://cloud.google.com/tpu/docs)
-- [TensorFlow TPU Guide](https://www.tensorflow.org/guide/tpu)
-- [PyTorch XLA Documentation](https://pytorch.org/xla/)
-- [JAX on TPU](https://jax.readthedocs.io/)
-- [Pallas: a JAX kernel language](https://docs.jax.dev/en/latest/pallas/index.html)
-- [How to Scale Your Model | Google DeepMind](https://jax-ml.github.io/scaling-book/)
-
-#### GitHub
-- [TPU Starter](https://github.com/ayaka14732/tpu-starter/tree/main)
-
-### 📊 Reference Summary
-
 > References cited in the architecture articles under `docs/architecture/`. English section includes **English-language sources only**.
 
 #### Blogs
 - [An in-depth look at Google’s first Tensor Processing Unit (TPU)](https://cloud.google.com/blog/products/ai-machine-learning/an-in-depth-look-at-googles-first-tensor-processing-unit-tpu)
 - [Google supercharges machine learning tasks with custom chip](https://cloud.google.com/blog/products/ai-machine-learning/google-supercharges-machine-learning-tasks-with-custom-chip)
+- [TPU Deep Dive](https://henryhmko.github.io/posts/tpu/tpu.html)
+- [Google TPU Architecture: Complete Guide to 7 Generations](https://www.introl.io/blog/google-tpu-architecture-complete-guide-7-generations)
 
 #### Slides
 - [Google’s Training Chips Revealed: TPUv2 and TPUv3](https://www.hc32.hotchips.org/assets/program/conference/day2/HotChips2020_ML_Training_Google_Norrie_Patil.v01.pdf)
@@ -218,38 +194,10 @@ Special thanks to all contributors and the TPU community for their valuable inpu
 #### 我的文章
 - [google最新的tpu架构信息](docs/architecture/Google's_latest_TPU_tracking.md)
 
-#### 技术博客
-> 中文互联网的朋友首先推荐ZOMI老师的AI Infra中关于Google TPU架构的演进系列
-- [谷歌 TPU 发展历史以及架构演变 | ZOMI](https://infrasys-ai.github.io/aisystem-docs/02Hardware05Abroad/04TPUIntrol.html)
-- [TPU 使用教程](https://shizhediao.github.io/TPU-Tutorial/)
-- [TPU深度探索（TPU Deep Dive）](https://henryhmko.github.io/posts/tpu/tpu.html)
-- [SemiAnalysis深度解读TPU--谷歌冲击“英伟达帝国”](https://wallstreetcn.com/articles/3760377)
-- [TPU 架构：谷歌 7 代处理器完全指南](https://www.introl.io/blog/google-tpu-architecture-complete-guide-7-generations)
-#### PPT
-- [TPU数据中心的性能分析](https://andrewt0301.github.io/hse-acos-course/part1ca/16_TPU/NAETPUslides5Apr17v2.pdf)
-- [TPU演进十年：Google的十大经验教训](https://www.cs.ucla.edu/wp-content/uploads/cs/PATTERSON-10-Lessons-4-TPU-gens-CO2e-45-minutes.pdf)
-
-#### Paper
-- [Ten Lessons From Three Generations Shaped Google’s TPUv4i](https://gwern.net/doc/ai/scaling/hardware/2021-jouppi.pdf)
-- [In-Datacenter Performance Analysis of a Tensor Processing Unit](https://arxiv.org/pdf/1704.04760)
-
-#### 技术文档
-- [Google Cloud TPU文档](https://cloud.google.com/tpu/docs)
-- [TensorFlow TPU指南](https://www.tensorflow.org/guide/tpu)
-- [PyTorch XLA文档](https://pytorch.org/xla/)
-- [JAX on TPU](https://jax.readthedocs.io/)
-- [Pallas: a JAX kernel language](https://docs.jax.dev/en/latest/pallas/index.html)
-- [ensor Processing Units (TPU): A Technical Analysis and Their Impact on Artificial Intelligence](https://tech4future.info/wp-content/uploads/2024/11/Tensor-Processing-Units-TPU-Paper-ENG.pdf)
-- [How to Scale Your Model | Google DeepMind](https://jax-ml.github.io/scaling-book/)
-
-#### GitHub
-- [TPU Starter](https://github.com/ayaka14732/tpu-starter/tree/main)
-
-### 📊 资料汇总
-
 > 依据 `docs/architecture/` 中文章的引用资料汇总（中文区不做语言限制）。
 
 #### 技术博客
+> 中文互联网的朋友首先推荐ZOMI老师的AI Infra中关于Google TPU架构的演进系列
 - [谷歌 TPU 发展历史以及架构演变 | ZOMI](https://infrasys-ai.github.io/aisystem-docs/02Hardware05Abroad/04TPUIntrol.html)
 - [TPU 使用教程](https://shizhediao.github.io/TPU-Tutorial/)
 - [TPU深度探索（TPU Deep Dive）](https://henryhmko.github.io/posts/tpu/tpu.html)
